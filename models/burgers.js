@@ -7,26 +7,19 @@ const burger = {
       cb(res);
     });
   },
-  // The variables cols and vals are arrays.
-  insertOne: function (name, cb) {
-    orm.insertOne("burgers", "name, devoured", `"${name}", false`, function (
-      res
-    ) {
+
+  create: function (name, cb) {
+    orm.create("burgers", "name, devoured", `"${name}", false`, function (res) {
       cb(res);
     });
   },
 
-  update: function (objColVals, condition, cb) {
-    orm.update("cats", objColVals, condition, function (res) {
-      cb(res);
-    });
-  },
-  delete: function (condition, cb) {
-    orm.delete("cats", condition, function (res) {
+  update: function (id, cb) {
+    orm.update("burgers", "devoured", true, "id", `${id}`, function (res) {
       cb(res);
     });
   },
 };
 
-// Export the database functions for the controller (catsController.js).
-module.exports = cat;
+// Export the database functions
+module.exports = burger;
