@@ -35,7 +35,10 @@
             {{#unless devoured}}
             <li>
                 {{id}}.{{name}}
-                <button class="devoured-button">
+                <button
+                    class="devoured-button"
+                    data-id={{id}}
+                >
                     DEVOUR NOW
                 </button>
             </li>

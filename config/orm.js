@@ -25,7 +25,7 @@ const orm = {
   },
 
   update: function (table, column1, value1, column2, value2, cb) {
-    const query = `INSERT INTO ${table} SET ${column1} = ${value1} WHERE ${column2} = ${value2}`;
+    const query = `UPDATE ${table} SET ${column1} = ${value1} WHERE ${column2} = ${value2}`;
     connection.query(query, function (err, result) {
       if (err) {
         throw err;

@@ -28,7 +28,6 @@ $(function () {
       type: "POST",
       data: newBurger,
     }).then(function () {
-      console.log("new burger has been created");
       location.reload();
     });
   });
