@@ -33,25 +33,10 @@
         <ul>
             {{#each burgers}}
             {{#unless devoured}}
-            <li>
-                {{id}}.{{name}}
-                <button
-                    class="devoured-button"
-                    data-id={{id}}
-                >
-                    DEVOUR NOW
-                </button>
-            </li>
+            {{> burger-block devoured=true}}
             {{/unless}}
             {{/each}}
         </ul>
-        {{!-- <ul>
-            {{#each burgers}}
-            {{#unless devoured}}
-            {{> burgers/burger-block devoured=true}}
-            {{/unless}}
-            {{/each}}
-        </ul> --}}
 
     </div>
     {{!-- burger devoured --}}
@@ -60,9 +45,7 @@
         <ul>
             {{#each burgers}}
             {{#if devoured}}
-            <li>
-                {{id}}.{{name}}
-            </li>
+            {{> burger-block devoured=false}}
             {{/if}}
             {{/each}}
         </ul>
