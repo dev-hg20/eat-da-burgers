@@ -8,24 +8,24 @@ var burger = require("../models/burgers");
 //GET routes
 router.get("/", function (req, res) {
   burger.all(function (data) {
+    console.log(data);
     const hbsObject = {
       burgers: data,
     };
-    console.log(hbsObject);
     res.render("index", hbsObject);
   });
 });
 
 //POST route
 router.post("/api/burgers", function (req, res) {
-  burger.insertOne(req.body.name, function (result) {
+  burger.create(req.body.name, function (result) {
     res.json(result);
   });
 });
 
 //PUT route
 router.put("/api/burgers/:id", function (req, res) {
-  burger.updateOne(req.params.id, function (result) {
+  burger.update(req.params.id, function (result) {
     res.json(result);
   });
 });

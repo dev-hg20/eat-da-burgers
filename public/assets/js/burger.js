@@ -17,7 +17,7 @@ $(function () {
     });
   });
 
-  $(".form").on("submit", function (e) {
+  $("#form").on("submit", function (e) {
     event.preventDefault();
 
     var newBurger = {
