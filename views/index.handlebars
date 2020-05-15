@@ -27,16 +27,39 @@
     {{!-- burger waiting to be devoured --}}
     <div class="col-sm-6">
         <h2>Burgers Waiting For You to Devour!</h2>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora praesentium adipisci amet optio qui iste. Sit
-        quos error itaque, consectetur ipsam perspiciatis iste accusamus odit commodi assumenda! Asperiores, animi
-        optio.
+        <ul>
+            {{#each burgers}}
+            {{#unless devoured}}
+            <li>
+                {{id}}.{{name}}
+                <button class="devoured-button">
+                    DEVOUR NOW
+                </button>
+            </li>
+            {{/unless}}
+            {{/each}}
+        </ul>
+        {{!-- <ul>
+            {{#each burgers}}
+            {{#unless devoured}}
+            {{> burgers/burger-block devoured=true}}
+            {{/unless}}
+            {{/each}}
+        </ul> --}}
+
     </div>
     {{!-- burger devoured --}}
     <div class="col-sm-6">
         <h2>Devoured burgers!!!!</h2>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora praesentium adipisci amet optio qui iste. Sit
-        quos error itaque, consectetur ipsam perspiciatis iste accusamus odit commodi assumenda! Asperiores, animi
-        optio.
+        <ul>
+            {{#each burgers}}
+            {{#if devoured}}
+            <li>
+                {{id}}.{{name}}
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
     </div>
 </div>
 
