@@ -8,6 +8,8 @@ The technologies used to create the application include:
 
 - Javascript
 - Node.js
+- Handlebars
+- MySQL
 - Express.js
 - Heroku
 
@@ -17,7 +19,7 @@ Once you've cloned the repository from GitHub, you'll want to open the file serv
 
 ## Deployment
 
-This application has been deployed across Heroku, you can view this here:
+This application has been deployed across Heroku, you can view this here: https://sleepy-plains-89829.herokuapp.com/
 
 ## Preview of the Application
 
