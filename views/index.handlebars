@@ -2,8 +2,9 @@
     <h1>Eat-da-Burger</h1>
 </header>
 
-{{!-- burger input --}}
+<br>
 
+{{!-- burger input --}}
 <div class="row">
     <div class="col-sm-12">
         <form
@@ -30,7 +31,7 @@
     {{!-- burger waiting to be devoured --}}
     <div class="col-sm-6">
         <h2>Burgers Waiting For You to Devour!</h2>
-        <ul>
+        <ul class="p-2">
             {{#each burgers}}
             {{#unless devoured}}
             {{> burger-block devoured=true}}
