@@ -8,6 +8,7 @@ const orm = {
     const query = `SELECT * FROM ${tableInput}`;
     connection.query(query, function (err, result) {
       if (err) {
+        console.log(err);
         throw err;
       }
       cb(result);
